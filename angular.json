@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "RastMobileCase:build:production"
+              "buildTarget": "RastMobileCase:build:production"
             },
             "development": {
-              "browserTarget": "RastMobileCase:build:development"
+              "buildTarget": "RastMobileCase:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "RastMobileCase:build"
+            "buildTarget": "RastMobileCase:build"
           }
         },
         "test": {
