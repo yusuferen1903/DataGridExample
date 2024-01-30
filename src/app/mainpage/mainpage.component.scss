@@ -1,0 +1,77 @@
+.body {
+    background-color: #EFF2FF;
+    height: calc(100vh - 150px);
+}
+
+.pd-30 {
+    padding: 10px 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 50px 0px 50px;
+    background-color: #EFF2FF;
+  }
+  .search-container {
+    position: relative;
+  }
+  .search-box {
+    width: 200px;
+    padding: 10px;
+    border-radius: 40px;
+    border:none;
+  }
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    background-color: #744BFC;
+    color: #fff;
+    padding: 10px; 
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px
+  }
+  .add-account-btn {
+    padding: 10px 16px;
+    background-color: #744BFC;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+  
+  .add-account-btn:hover {
+    background-color: #0056b3;
+  }
+  /* Tek satırlar için farklı renk */
+::ng-deep .dx-datagrid-rowsview .dx-row:nth-child(odd) {
+    background-color: #FFFFFF; 
+  }
+  
+  /* Çift satırlar için farklı renk */
+::ng-deep .dx-datagrid-rowsview .dx-row:nth-child(even) {
+    background-color: #EFF2FF; 
+  }
+
+::ng-deep .dx-datagrid .dx-row>td {
+    padding: 20px;
+}
+
+::ng-deep .dx-header-row>td>.dx-datagrid-text-content {
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1px;
+}
+
+::ng-deep .dx-datagrid>.dx-datagrid-headers {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+::ng-deep .dx-bordered-bottom-view {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}

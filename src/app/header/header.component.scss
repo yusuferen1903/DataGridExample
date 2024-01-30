@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  nav {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  nav a {
+    margin-right: 20px;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .social-media a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .social-media a:not(:last-child) {
+    margin-right: 10px;
+  }
+  .social-media a {
+    color: white; /* İkon rengi beyaz */
+    text-decoration: none; /* Link altı çizgisini kaldır */
+    background-color: #744BFC; /* Arka plan rengi mor */
+    padding: 5px; /* İkon etrafında biraz boşluk bırak */
+  }
+  
+  .social-media a:hover {
+    background-color: white; /* Fare üzerine geldiğinde arka plan rengi beyaz olacak */
+    color: #744BFC; /* İkon rengi mor olacak */
+  }
