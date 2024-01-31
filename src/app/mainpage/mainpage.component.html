@@ -1,0 +1,25 @@
+<div class="body">
+  <div class="header">
+    <div class="search-container">
+      <input type="text" placeholder="Arama..." class="search-box">
+      <i class="fas fa-search search-icon"></i>
+    </div>
+    <button class="add-account-btn" (click)="openDialog()"><i class="fas fa-plus"></i> Yeni Hesap Ekle</button>
+  </div>
+  <dx-data-grid
+  id="gridContainer"
+  [dataSource]="accs"
+  [showBorders]="true"
+  [remoteOperations]="true"
+  class="pd-30"
+>
+  <dxi-column dataField="SosyalMedyaLinki" dataType="string"> </dxi-column>
+  <dxi-column dataField="SosyalMedyaAdı" dataType="string"> </dxi-column>
+  <dxi-column dataField="Açıklama" dataType="string"> </dxi-column>
+  <dxo-paging [pageSize]="5"></dxo-paging>
+  <dxo-pager
+    [showPageSizeSelector]="true"
+    [allowedPageSizes]="[5, 10, 15]"
+  ></dxo-pager>
+</dx-data-grid>
+</div>
