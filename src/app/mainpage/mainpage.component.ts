@@ -11,6 +11,8 @@ import { DataService } from '../shared/services/data.service';
 export class MainpageComponent {
   accInfo: AccDtoList[] = [];
   accs:AccDtoList[] = [];
+  searchText: string = '';
+  filteredDataList: AccDtoList[] = [];
   constructor(
     public dialog: MatDialog,
     private dataService: DataService
@@ -19,9 +21,16 @@ export class MainpageComponent {
     //localstorageden datayı çekip yükler
     this.dataService.getData().subscribe(data => {
       this.accs = data
+      this.filterData();
     })
   }
-
+  //arama yapar
+  filterData(): void {
+    this.filteredDataList = this.accs.filter(item => {
+      return item.SosyalMedyaLinki.toLowerCase().includes(this.searchText.toLowerCase()) || item.SosyalMedyaAdı.toLowerCase().includes(this.searchText.toLowerCase()) ||
+             item.Açıklama.toLowerCase().includes(this.searchText.toLowerCase());
+    });
+  }
   //modali açar ve hesap ekledikten sonra dönen veriyi arraye ekler localstorage basar
   openDialog(): void {
     const dialogRef = this.dialog.open(AddAccModalComponent, {
@@ -31,6 +40,7 @@ export class MainpageComponent {
     dialogRef.afterClosed().subscribe(result => {
       this.accInfo = result;
       this.dataService.addData(this.accInfo[0])
+      this.ngOnInit()
     });
   }
 }
