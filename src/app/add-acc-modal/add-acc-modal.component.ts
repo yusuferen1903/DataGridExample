@@ -22,6 +22,8 @@ export class AddAccModalComponent {
   public close(value:any) {
     this.dialogRef.close(value);
   }
+
+  //verileri ekledikten sonra modali kapatır ve mainpage sayfasına gönderir
   save() {
       const newItem = {
         SosyalMedyaLinki: this.data.link,

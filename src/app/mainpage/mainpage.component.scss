@@ -75,3 +75,22 @@
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+
+@media (max-width: 768px) {
+  .d-none {
+    display: none;
+  }
+}
+
+@media (max-width: 476px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .search-container {
+    margin-bottom: 20px;
+  }
+  .add-account-btn {
+    width: 200px;
+  }
+}

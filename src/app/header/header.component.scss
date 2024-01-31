@@ -30,13 +30,25 @@ header {
     margin-right: 10px;
   }
   .social-media a {
-    color: white; /* İkon rengi beyaz */
-    text-decoration: none; /* Link altı çizgisini kaldır */
-    background-color: #744BFC; /* Arka plan rengi mor */
-    padding: 5px; /* İkon etrafında biraz boşluk bırak */
+    color: white;
+    text-decoration: none;
+    background-color: #744BFC;
+    padding: 5px;
   }
   
   .social-media a:hover {
-    background-color: white; /* Fare üzerine geldiğinde arka plan rengi beyaz olacak */
-    color: #744BFC; /* İkon rengi mor olacak */
+    background-color: white;
+    color: #744BFC;
+  }
+
+  @media (max-width: 768px) {
+    .d-none {
+      display: none;
+    }
+  }
+
+  @media (max-width: 332px) {
+    .social-media{
+      display: none;
+    }
   }

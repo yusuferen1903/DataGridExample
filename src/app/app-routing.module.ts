@@ -4,6 +4,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 
 const routes: Routes = [
+
+  //MainLayout Header ve Footerın Bulunduğu Ana Component içine ise children componentler gelerek sayfayı oluşturuyor.
   {
     path: '',
     component: MainLayoutComponent,

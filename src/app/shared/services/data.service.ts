@@ -9,12 +9,12 @@ export class DataService {
   private data: AccDtoList[] = [];
 
   constructor() { }
-
+  //localstoragede saklanan datayı çeker
   getData(): Observable<AccDtoList[]> {
     this.loadDataLocally()
     return of(this.data);
   }
-
+  //localstorege datayı yazar
   addData(item: AccDtoList): void {
     this.data.push(item);
     this.saveDataLocally(this.data);
