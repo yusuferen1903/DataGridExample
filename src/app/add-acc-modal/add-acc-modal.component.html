@@ -1,0 +1,24 @@
+<div class="main">
+    <div class="closeIcon">
+        <i class="fa fa-times" aria-hidden="true" (click)="onNoClick()"></i>
+    </div>
+    <div class="body">
+        <p>Sosyal Medya Linki</p>
+          <input  [(ngModel)]="data.link">
+      </div>
+      <div class="body">
+          <p>Sosyal Medya Adı</p>
+            <input  [(ngModel)]="data.name">
+      </div>
+      <div class="body">
+          <p>Açıklama</p>
+            <input  [(ngModel)]="data.description">
+        </div>
+      
+        
+      <div class="buttons">
+        <button class="cancel" (click)="onNoClick()">Vazgeç</button>
+        <button class="save" (click)="save()">Kaydet</button>
+      </div>
+</div>
+

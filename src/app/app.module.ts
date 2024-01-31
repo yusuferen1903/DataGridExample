@@ -9,20 +9,45 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatDialog,
+  MAT_DIALOG_DATA,
+  MatDialogRef,
+  MatDialogTitle,
+  MatDialogContent,
+  MatDialogActions,
+  MatDialogClose,
+} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import {FormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { AddAccModalComponent } from './add-acc-modal/add-acc-modal.component';
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     DevExtremeModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatDialogTitle,
+    MatDialogContent,
+    MatDialogActions,
+    MatDialogClose,
   ],
   declarations: [
     AppComponent,
     MainpageComponent,
     MainLayoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AddAccModalComponent
   ],
 
   providers: [HttpClientModule],
